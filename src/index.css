@@ -113,6 +113,16 @@ h4 {
    margin-bottom: 25px;
 }
 
+.error-block{
+	padding: 30px;
+	width: 100%;
+	min-height: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 /*============================================ Header ===================================================*/
 .header-main {
    min-height: 74px;
@@ -326,7 +336,7 @@ h4 {
 
 /*============================================ Vision-section ===================================================*/
 .vision {
-   padding: 80px 0 75px 0;
+   padding: 0 0 75px 0;
 }
 
 .vision-item {
@@ -693,7 +703,7 @@ h4 {
    }
 
    .vision {
-      padding: 30px 0;
+      padding: 0 0 30px 0;
    }
 
    .vision-item {

@@ -1,7 +1,13 @@
 import React from 'react'
 import logo from '../../images/logo.png'
+import { Link } from 'react-router-dom'
+import { useGlobalContext } from '../../context'
 
 function Header() {
+
+	const { openModal } = useGlobalContext()
+	const { menuOpen, openMenu, closeMenu } = useGlobalContext()
+
 	return (
 		<header className="header">
 			<div className="container-fluid">
@@ -10,19 +16,29 @@ function Header() {
 					<nav className="nav">
 						<ul className="nav__list">
 							<li className="nav__line">
-								<a href="#" className="nav__link">home</a>
+								<Link to="/">
+									<span className="nav-mobile__link">home</span>
+								</Link>
 							</li>
 							<li className="nav__line">
-								<a href="#" className="nav__link">vision</a>
+								<Link to="/vision">
+									<span className="nav-mobile__link">vision</span>
+								</Link>
 							</li>
 							<li className="nav__line">
-								<a href="#" className="nav__link">careers</a>
+								<Link to="/news">
+									<span className="nav-mobile__link">news</span>
+								</Link>
 							</li>
 							<li className="nav__line">
-								<a href="#" className="nav__link">team</a>
+								<Link to="123">
+									<span className="nav-mobile__link">careers</span>
+								</Link>
 							</li>
 							<li className="nav__line">
-								<a href="#" className="nav__link">about</a>
+								<Link to="1234">
+									<span className="nav-mobile__link">team</span>
+								</Link>
 							</li>
 						</ul>
 					</nav>
@@ -30,11 +46,19 @@ function Header() {
 						<option value="EN">EN</option>
 						<option value="UA">UA</option>
 					</select>
-					<button className="btn modal-open" type="button">Get early access</button>
+					<button
+						className="btn modal-open"
+						type="button"
+						onClick={openModal}
+					>
+						Get early access
+					</button>
 				</div>
 			</div>
-			<div className="mobile-menu">
-				<div className="mobile-menu__btn">
+			<div className={`${menuOpen ? 'mobile-menu active' : 'mobile-menu'}`}>
+				<div className="mobile-menu__btn" onClick={
+					menuOpen ? closeMenu : openMenu
+				}>
 					<div></div>
 					<div></div>
 					<div></div>
@@ -42,13 +66,19 @@ function Header() {
 				<nav className="nav-mobile">
 					<ul className="nav-mobile__list">
 						<li className="nav-mobile__line">
-							<a href="#" className="nav-mobile__link">home</a>
+							<Link to="/">
+								<span className="nav-mobile__link">home</span>
+							</Link>
 						</li>
 						<li className="nav-mobile__line">
-							<a href="#" className="nav-mobile__link">vision</a>
+							<Link to="/vision">
+								<span className="nav-mobile__link">vision</span>
+							</Link>
 						</li>
 						<li className="nav-mobile__line">
-							<a href="#" className="nav-mobile__link">careers</a>
+							<Link to="/news">
+								<span className="nav-mobile__link">news</span>
+							</Link>
 						</li>
 						<li className="nav-mobile__line">
 							<a href="#" className="nav-mobile__link">team</a>
@@ -56,6 +86,13 @@ function Header() {
 						<li className="nav-mobile__line">
 							<a href="#" className="nav-mobile__link">about</a>
 						</li>
+						<button
+						className="btn modal-open"
+						type="button"
+						onClick={openModal}
+					>
+						Get early access
+					</button>
 					</ul>
 				</nav>
 			</div>

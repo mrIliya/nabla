@@ -1,3 +1,4 @@
+
 import centerImage1 from '../images/center-image1.png'
 import centerImage2 from '../images/center-image2.png'
 import centerImage4 from '../images/center-image4.png'
@@ -15,8 +16,11 @@ import frontImage3 from '../images/center-image-front3.png'
 import frontImage4 from '../images/center-image-front4.png'
 import frontImage5 from '../images/center-image-front5.png'
 
+import { useGlobalContext } from '../context'
 
 function Vision() {
+	const { openModal } = useGlobalContext()
+
 	return (
 		<section className="vision">
 			<div className="container">
@@ -25,7 +29,7 @@ function Vision() {
 						<div className="image-block">
 							<img src={blockImage1} alt="image" />
 						</div>
-						<div className="center-image" style={{backgroundImage: `url(${centerImage1})`}}>
+						<div className="center-image" style={{ backgroundImage: `url(${centerImage1})` }}>
 							<div className="center-image__front">
 								<img src={frontImage1} alt="image" />
 							</div>
@@ -38,7 +42,7 @@ function Vision() {
 							</div>
 						</div>
 					</div>
-					 <div className="vision-item">
+					<div className="vision-item">
 						<div className="text-block">
 							<div className="text-block__content">
 								<h2 className="text-block__title title">A special relationship</h2>
@@ -48,9 +52,9 @@ function Vision() {
 							</p>
 							</div>
 						</div>
-						<div className="center-image" style={{backgroundImage: `url(${centerImage2})`}}>
+						<div className="center-image" style={{ backgroundImage: `url(${centerImage2})` }}>
 							<div className="center-image__front">
-							<img src={frontImage2} alt="image" />
+								<img src={frontImage2} alt="image" />
 							</div>
 						</div>
 						<div className="image-block">
@@ -59,11 +63,11 @@ function Vision() {
 					</div>
 					<div className="vision-item">
 						<div className="image-block">
-						<img src={blockImage3} alt="image" />
+							<img src={blockImage3} alt="image" />
 						</div>
-						<div className="center-image" style={{backgroundImage: `url(${centerImage1})`}}>
+						<div className="center-image" style={{ backgroundImage: `url(${centerImage1})` }}>
 							<div className="center-image__front">
-							<img src={frontImage3} alt="image" />
+								<img src={frontImage3} alt="image" />
 							</div>
 						</div>
 						<div className="text-block">
@@ -86,22 +90,22 @@ function Vision() {
 							</p>
 							</div>
 						</div>
-						<div className="center-image" style={{backgroundImage: `url(${centerImage4})`}}>
+						<div className="center-image" style={{ backgroundImage: `url(${centerImage4})` }}>
 							<div className="center-image__front">
-							<img src={frontImage4} alt="image" />
+								<img src={frontImage4} alt="image" />
 							</div>
 						</div>
 						<div className="image-block">
-						<img src={blockImage4} alt="image" />
+							<img src={blockImage4} alt="image" />
 						</div>
 					</div>
 					<div className="vision-item">
 						<div className="image-block">
-						<img src={blockImage5} alt="image" />
+							<img src={blockImage5} alt="image" />
 						</div>
-						<div className="center-image" style={{backgroundImage: `url(${centerImage5})`}}>
+						<div className="center-image" style={{ backgroundImage: `url(${centerImage5})` }}>
 							<div className="center-image__front">
-							<img src={frontImage5} alt="image" />
+								<img src={frontImage5} alt="image" />
 							</div>
 						</div>
 						<div className="text-block">
@@ -112,7 +116,13 @@ function Vision() {
 								data together with AI will unlock our ability to predict, prevent and cure disease more
 								precisely, empowering people to lead healthier lives.
 							</p>
-								<button className="btn modal-open" type="button">Get early access</button>
+								<button
+									className="btn modal-open"
+									type="button"
+									onClick={openModal}
+								>
+									Get early access
+								</button>
 							</div>
 						</div>
 					</div>
