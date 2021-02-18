@@ -4,6 +4,7 @@ import instagramIcon from '../../images/instagram.png'
 import facebookIcon from '../../images/facebook.png'
 import twitterIcon from '../../images/twitter.png'
 import LinkedIcon from '../../images/linkedin.png'
+import { Link } from 'react-router-dom'
 
 function Footer() {
 	return (
@@ -28,10 +29,10 @@ function Footer() {
 						<ul className="footer-item__list">
 							<h3 className="footer-item__title">Address</h3>
 							<li className="footer-item__line">
-								<a href="#" className="footer-item__link">22 rue Chapon</a>
+								<span className="footer-item__link">22 rue Chapon</span>
 							</li>
 							<li className="footer-item__line">
-								<a href="#" className="footer-item__link">75003 Paris</a>
+								<span className="footer-item__link">75003 Paris</span>
 							</li>
 						</ul>
 					</div>
@@ -48,7 +49,7 @@ function Footer() {
 							<li className="footer-social__line">
 								<a href="#" className="footer-social__icon">
 									<img src={instagramIcon} alt="instagram" />
-								</a>
+								</a>		
 							</li>
 							<li className="footer-social__line">
 								<a href="#" className="footer-social__icon">

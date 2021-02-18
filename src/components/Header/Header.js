@@ -17,27 +17,27 @@ function Header() {
 						<ul className="nav__list">
 							<li className="nav__line">
 								<Link to="/">
-									<span className="nav-mobile__link">home</span>
+									<span className="nav__link">home</span>
 								</Link>
 							</li>
 							<li className="nav__line">
 								<Link to="/vision">
-									<span className="nav-mobile__link">vision</span>
+									<span className="nav__link">vision</span>
 								</Link>
 							</li>
 							<li className="nav__line">
 								<Link to="/news">
-									<span className="nav-mobile__link">news</span>
+									<span className="nav__link">news</span>
 								</Link>
 							</li>
 							<li className="nav__line">
 								<Link to="123">
-									<span className="nav-mobile__link">careers</span>
+									<span className="nav__link">careers</span>
 								</Link>
 							</li>
 							<li className="nav__line">
 								<Link to="1234">
-									<span className="nav-mobile__link">team</span>
+									<span className="nav__link">team</span>
 								</Link>
 							</li>
 						</ul>
