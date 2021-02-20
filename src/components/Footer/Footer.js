@@ -47,22 +47,22 @@ function Footer() {
 					<div className="footer-social">
 						<ul className="footer-social__list">
 							<li className="footer-social__line">
-								<a href="#" className="footer-social__icon">
+								<a href="https://instagram.com" className="footer-social__icon">
 									<img src={instagramIcon} alt="instagram" />
 								</a>		
 							</li>
 							<li className="footer-social__line">
-								<a href="#" className="footer-social__icon">
+								<a href="https://instagram.com" className="footer-social__icon">
 									<img src={facebookIcon} alt="facebook" />
 								</a>
 							</li>
 							<li className="footer-social__line">
-								<a href="#" className="footer-social__icon">
+								<a href="https://instagram.com" className="footer-social__icon">
 									<img src={twitterIcon} alt="twitter" />
 								</a>
 							</li>
 							<li className="footer-social__line">
-								<a href="#" className="footer-social__icon">
+								<a href="https://instagram.com" className="footer-social__icon">
 									<img src={LinkedIcon} alt="linkedin" />
 								</a>
 							</li>

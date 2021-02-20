@@ -31,13 +31,13 @@ function Header() {
 								</Link>
 							</li>
 							<li className="nav__line">
-								<Link to="123">
-									<span className="nav__link">careers</span>
+								<Link to="/team">
+									<span className="nav__link">team</span>
 								</Link>
 							</li>
 							<li className="nav__line">
 								<Link to="1234">
-									<span className="nav__link">team</span>
+									<span className="nav__link">about</span>
 								</Link>
 							</li>
 						</ul>
@@ -67,31 +67,35 @@ function Header() {
 					<ul className="nav-mobile__list">
 						<li className="nav-mobile__line">
 							<Link to="/">
-								<span className="nav-mobile__link">home</span>
+								<span className="nav-mobile__link" onClick={closeMenu}>home</span>
 							</Link>
 						</li>
 						<li className="nav-mobile__line">
 							<Link to="/vision">
-								<span className="nav-mobile__link">vision</span>
+								<span className="nav-mobile__link" onClick={closeMenu}>vision</span>
 							</Link>
 						</li>
 						<li className="nav-mobile__line">
 							<Link to="/news">
-								<span className="nav-mobile__link">news</span>
+								<span className="nav-mobile__link" onClick={closeMenu}>news</span>
 							</Link>
 						</li>
 						<li className="nav-mobile__line">
-							<a href="#" className="nav-mobile__link">team</a>
+							<Link to="/team">
+								<span className="nav-mobile__link" onClick={closeMenu}>team</span>
+							</Link>
 						</li>
 						<li className="nav-mobile__line">
-							<a href="#" className="nav-mobile__link">about</a>
+							<Link to="/1234">
+								<span className="nav-mobile__link" onClick={closeMenu}>about</span>
+							</Link>
 						</li>
 						<button
-						className="btn modal-open"
-						type="button"
-						onClick={openModal}
-					>
-						Get early access
+							className="btn modal-open"
+							type="button"
+							onClick={openModal}
+						>
+							Get early access
 					</button>
 					</ul>
 				</nav>

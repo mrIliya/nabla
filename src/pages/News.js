@@ -5,6 +5,7 @@ function News() {
 	return (
 		<section className="news">
 			<div className="container">
+				<h2 className="news__title title">Our News</h2>
 				<div className="news__inner">
 					<div className="news-image">
 						<div className="news-image__front">

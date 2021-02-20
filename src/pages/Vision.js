@@ -25,6 +25,7 @@ function Vision() {
 		<section className="vision">
 			<div className="container">
 				<div className="vision__inner">
+					<h2 className="vision__title title">Our Vision</h2>
 					<div className="vision-item">
 						<div className="image-block">
 							<img src={blockImage1} alt="image" />

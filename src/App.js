@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Vision from './pages/Vision'
 import Main from './pages/Main'
 import News from './pages/News'
+import Team from './pages/Team'
 import Error from './pages/Error'
 
 import Header from './components/Header/Header'
@@ -24,6 +25,9 @@ function App() {
 				</Route>
 				<Route exact path="/news">
 					<News />
+				</Route>
+				<Route exact path="/team">
+					<Team/>
 				</Route>
 				<Route exact path="*" >
 					<Error />

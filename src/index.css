@@ -113,14 +113,14 @@ h4 {
    margin-bottom: 25px;
 }
 
-.error-block{
-	padding: 30px;
-	width: 100%;
-	min-height: 500px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+.error-block {
+   padding: 30px;
+   width: 100%;
+   min-height: 500px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
 
 /*============================================ Header ===================================================*/
@@ -337,6 +337,13 @@ h4 {
 /*============================================ Vision-section ===================================================*/
 .vision {
    padding: 0 0 75px 0;
+
+}
+
+.vision__title {
+   text-align: center;
+   font-size: var(--large-font-size);
+   line-height: 50px;
 }
 
 .vision-item {
@@ -434,7 +441,14 @@ h4 {
 
 /*============================================ News-section ===================================================*/
 .news {
-   padding: 40px 0 115px 0;
+   padding: 0 0 115px 0;
+}
+
+.news__title {
+   text-align: center;
+   font-size: var(--large-font-size);
+   line-height: 50px;
+   margin-bottom: 60px;
 }
 
 .news__inner {
@@ -519,6 +533,123 @@ h4 {
 .news-content__more {
    color: var(--text-grey);
    text-decoration: underline;
+}
+
+/*============================================ Team-section ===================================================*/
+
+.team {
+   padding: 30px 0;
+}
+
+.team__title {
+   font-size: var(--large-font-size);
+   text-align: center;
+}
+
+.team__inner {
+   position: relative;
+   max-width: 570px;
+   margin: 0 auto;
+   padding: 0 35px;
+}
+
+.team__content {
+   height: 300px;
+   max-width: 500px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 0 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--bg-light-blue);
+   position: relative;
+   overflow: hidden;
+}
+
+.team-item {
+   position: absolute;
+   top: 0;
+   left: 0;
+   opacity: 0;
+   height: 100%;
+   max-width: 500px;
+   min-width: 100%;
+   padding: 30px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--bg-blue);
+   transition: all .8s ease-in-out;
+}
+
+.team-item.active-item {
+   opacity: 1;
+   transform: translateX(0);
+
+}
+
+.team-item.last-item {
+   transform: translateX(-100%);
+
+}
+
+.team-item.next-item {
+   transform: translateX(100%);
+
+}
+
+.team-item__image {
+   height: 100px;
+   width: 100px;
+   margin: 30px auto;
+   border-radius: 50%;
+   background-color: #fff;
+   overflow: hidden;
+
+}
+
+.team-item__image img {
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+}
+
+.team-item__name {
+   font-family: EuclidCircularBRegular;
+   font-size: 28px;
+   color: var(--text-blue);
+   line-height: 1.3;
+   margin-bottom: 10px;
+	text-transform: capitalize;
+}
+
+.team-item__position {
+   font-family: Cabernet;
+   color: var(--text-grey);
+}
+
+.team__btn {
+   position: absolute;
+   top: 50%;
+   left: 0;
+   transform: translate(0, -50%);
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 10px;
+   transition: all ease .3s;
+}
+
+.team__btn-right {
+   left: auto;
+   right: 0;
+}
+
+.team__btn:hover {
+   filter: saturate(40%);
 }
 
 /*============================================ Footer ===================================================*/
@@ -674,6 +805,7 @@ h4 {
 }
 
 @media (max-width: 1200px) {
+
    .main-screen__logo .line {
       max-width: 150px;
       margin: 0 10px;
@@ -827,7 +959,7 @@ h4 {
 
 @media (max-width: 800px) {
    .news {
-      padding: 30px 0;
+      padding: 0 0 30px 0;
    }
 
    .news-content {
@@ -915,6 +1047,10 @@ h4 {
 
    .center-image__front {
       left: 19%;
+   }
+
+   .news__inner {
+      justify-content: start;
    }
 
    .news-content {
@@ -1061,4 +1197,9 @@ h4 {
       margin-right: 0;
       width: 100%;
    }
+
+   .team__inner {
+      padding: 0;
+   }
+
 }
