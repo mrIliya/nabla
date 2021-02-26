@@ -2,11 +2,13 @@ import React from 'react'
 import logo from '../../images/logo.png'
 import { Link } from 'react-router-dom'
 import { useGlobalContext } from '../../context'
+import Icon from 'react-icons-kit'
+import { brightness_high, brightness_low } from 'react-icons-kit/ikons'
+
 
 function Header() {
 
-	const { openModal } = useGlobalContext()
-	const { menuOpen, openMenu, closeMenu } = useGlobalContext()
+	const { openModal, menuOpen, openMenu, closeMenu, theme, setTheme, toggleTheme } = useGlobalContext()
 
 	return (
 		<header className="header">
@@ -42,10 +44,15 @@ function Header() {
 							</li>
 						</ul>
 					</nav>
-					<select className="language-select" name="language" id="language">
-						<option value="EN">EN</option>
-						<option value="UA">UA</option>
-					</select>
+					<button
+						type="button"
+						className="theme-icon"
+						onClick={toggleTheme}
+					>
+						{theme === 'light-theme'
+							? <Icon icon={brightness_low} />
+							: <Icon icon={brightness_high} />}
+					</button>
 					<button
 						className="btn modal-open"
 						type="button"

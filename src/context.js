@@ -3,11 +3,33 @@ import data from './data'
 
 const AppContext = React.createContext()
 
+const getStorageTheme = () => {
+	let theme = 'light-theme'
+	if (localStorage.getItem('theme')) {
+		theme = localStorage.getItem('theme')
+	}
+	return theme
+}
+
 const AppProvider = ({ children }) => {
 	const [modalOpen, setModalOpen] = useState(false)
 	const [menuOpen, setMenuOpen] = useState(false)
 	const [people, setPeople] = useState(data)
 	const [index, setIndex] = useState(0)
+	const [theme, setTheme] = useState(getStorageTheme())
+
+	const toggleTheme = () => {
+		if (theme === 'light-theme') {
+			setTheme('dark-theme')
+		} else {
+			setTheme('light-theme')
+		}
+	}
+
+	useEffect(() => {
+		document.documentElement.className = theme
+		localStorage.setItem('theme', theme)
+	}, [theme])
 
 	// made slider ciclical
 	useEffect(() => {
@@ -56,7 +78,10 @@ const AppProvider = ({ children }) => {
 				closeMenu,
 				people,
 				index,
-				setIndex
+				setIndex,
+				theme,
+				setTheme,
+				toggleTheme
 			}}
 		>
 			{children}

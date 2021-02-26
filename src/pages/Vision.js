@@ -1,4 +1,3 @@
-
 import centerImage1 from '../images/center-image1.png'
 import centerImage2 from '../images/center-image2.png'
 import centerImage4 from '../images/center-image4.png'

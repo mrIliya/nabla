@@ -21,12 +21,7 @@
 
 /*============================================ Variables ===================================================*/
 :root {
-   --text-blue: #040062;
-   --text-grey: #6D758D;
-   --bg-blue: #C7E3E9;
-   --bg-light-blue: #F5FBFF;
-   --btn-blue: #0013FF;
-   --bg-pink: #FEF1EF;
+
    --main-font-size: 18px;
    --large-font-size: 48px;
    --spacing-small: 10px;
@@ -36,13 +31,35 @@
    --spacing-large: 38px;
 }
 
+.dark-theme {
+   --clr-bcg: #282c35;
+   --text-main: #fff;
+   --text-submain: #d8dce7;
+   --bg-blue: #6ca3af;
+   --bg-light-blue: #3e4c55;
+   --bg-pink: #c28888;
+   --btn-blue: #393e7c;
+   --icon-theme: #f8e003;
+}
+
+.light-theme {
+   --clr-bcg: #fff;
+   --text-main: #040062;
+   --text-submain: #6D758D;
+   --bg-blue: #C7E3E9;
+   --bg-light-blue: #F5FBFF;
+   --bg-pink: #FEF1EF;
+   --btn-blue: #0013FF;
+   --icon-theme: #270101;
+}
+
 /*============================================ Scrollbar and Global Styles ==================================*/
 ::-webkit-scrollbar {
    width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-   background-color: var(--text-grey);
+   background-color: var(--text-submain);
    border-radius: 5px;
 }
 
@@ -57,6 +74,8 @@
 body {
    font-family: RobotoRegular;
    font-size: var(--main-font-size);
+   background-color: var(--clr-bcg);
+   transition: all .3s;
 }
 
 button {
@@ -79,12 +98,8 @@ a {
    text-decoration: none;
 }
 
-select {
-   display: block;
-}
-
 p {
-   color: var(--text-grey);
+   color: var(--text-submain);
    margin: 0 0 40px 0;
 }
 
@@ -108,7 +123,7 @@ h4 {
 }
 
 .title {
-   color: var(--text-blue);
+   color: var(--text-main);
    font-family: Cabernet;
    margin-bottom: 25px;
 }
@@ -143,15 +158,33 @@ h4 {
 .nav__link {
    font-family: EuclidCircularBRegular;
    font-size: var(--spacing-middle);
-   color: var(--text-blue);
+   color: var(--text-main);
 }
 
-.language-select {
+.theme-icon {
    margin-left: 0;
    margin-right: var(--spacing-large);
    cursor: pointer;
-   border: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex: 0 0 auto;
+   width: 25px;
+   height: 25px;
+   border: transparent;
+   border-radius: 50%;
    font-size: var(--spacing-middle);
+   color: var(--icon-theme);
+   outline: transparent;
+	transition: all .3s linear;
+}
+
+.theme-icon:focus {
+   box-shadow: 0 0 3px 2px var(--icon-theme);
+}
+
+.theme-icon:hover{
+	box-shadow: 0 0 3px 2px var(--icon-theme);
 }
 
 .btn {
@@ -251,7 +284,7 @@ h4 {
 .nav-mobile__link {
    font-family: EuclidCircularBRegular;
    font-size: var(--spacing-semi-large);
-   color: var(--text-blue);
+   color: var(--text-main);
 }
 
 /*============================================ Main-section ===================================================*/
@@ -531,7 +564,7 @@ h4 {
 }
 
 .news-content__more {
-   color: var(--text-grey);
+   color: var(--text-submain);
    text-decoration: underline;
 }
 
@@ -619,15 +652,15 @@ h4 {
 .team-item__name {
    font-family: EuclidCircularBRegular;
    font-size: 28px;
-   color: var(--text-blue);
+   color: var(--text-main);
    line-height: 1.3;
    margin-bottom: 10px;
-	text-transform: capitalize;
+   text-transform: capitalize;
 }
 
 .team-item__position {
    font-family: Cabernet;
-   color: var(--text-grey);
+   color: var(--text-submain);
 }
 
 .team__btn {
@@ -661,7 +694,7 @@ h4 {
 }
 
 .footer-item__title {
-   color: var(--text-blue);
+   color: var(--text-main);
    font-size: 22px;
    line-height: 33px;
    margin-bottom: 12px;
@@ -674,7 +707,7 @@ h4 {
 .footer-item__link {
    line-height: 32px;
    font-size: 16px;
-   color: var(--text-grey);
+   color: var(--text-submain);
 }
 
 .footer-social {
@@ -994,10 +1027,6 @@ h4 {
 
    .mobile-menu__btn {
       display: flex;
-   }
-
-   .language-select {
-      display: none;
    }
 
    .main-screen {
